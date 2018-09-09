@@ -1,5 +1,5 @@
 <?php
-class CodeTimer {
+class CodeTimer_CodeTimer {
     private $start;
     private $stop;
     private $data = array();
