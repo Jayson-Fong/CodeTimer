@@ -26,7 +26,7 @@ while ($i++ < $trials) {
     $codeTimer->startTime();
     executedCode();
     $codeTimer->stopTime();
-    echo (PHP_EOL . "\e[1;33m" . ($trials - $i) . " \e[1;32mTrials Remaining - \e[1;32m" . (float)($i / $trials)*100 . "%\e[1;32m Complete - Using \e[1;31m" . $codeTimerRss->getCurrentRss()->memory . "\e[1;32mMBs of Memory\e[0m" . PHP_EOL);
+    echo (PHP_EOL . "\e[1;33m" . ($trials - $i) . " \e[1;32mTrials Remaining - \e[1;32m" . (float)($i / $trials)*100 . "%\e[1;32m Complete - Using \e[1;31m" . $codeTimerRss->getCurrentRss()['memory'] . "\e[1;32mMBs of Memory\e[0m" . PHP_EOL);
 }
 echo "\e[1;31m" . $trials . " \e[1;32mTrials Successful\e[0m";
 echo $codeTimer->getTime(true);
